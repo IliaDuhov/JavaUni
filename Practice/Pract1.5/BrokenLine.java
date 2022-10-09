@@ -1,4 +1,3 @@
-
 package pract1_5;
 
 import java.util.ArrayList;
