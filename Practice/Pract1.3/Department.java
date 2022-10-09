@@ -1,13 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package pract1_3;
-
-/**
- *
- * @author Ilia_Dukhov
- */
 public class Department {
+    private String name;
+    private Employee head;
+    ArrayList<Employee> employees;
+
+    public Department(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
     
+    public void addEmploy(Employee employee){
+        this.employees.add(employee);
+    }
+
+    public void removeEmploy(Employee employee){
+        this.employees.remove(employee);
+    }
+
+    public ArrayList<Employee> getEmployees(){
+        return this.employees;
+    }
 }
