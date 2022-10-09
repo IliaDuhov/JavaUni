@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package pract1_3;
-
-/**
- *
- * @author Ilia_Dukhov
- */
 public class Employee {
-    
+    private String name;
+    private Department dep;
+
+    public Employee(String name, Department dep) {
+        this.name = name;
+        this.dep = dep;
+    }
+
+    public Department getDep() {
+        return dep;
+    }
+
+    public String toString() {
+
+        return String.format("");
+    }
+
 }
