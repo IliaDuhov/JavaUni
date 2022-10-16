@@ -1,7 +1,4 @@
 
-package pract1_6;
-
-
 public class Human {
     private Name name;
     private int height;
