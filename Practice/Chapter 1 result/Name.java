@@ -1,10 +1,4 @@
 
-package pract1_6;
-
-/**
- *
- * @author Ilia_Dukhov
- */
 public class Name {
     private final String name;
     private String surname; 
