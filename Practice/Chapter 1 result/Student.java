@@ -1,13 +1,9 @@
 
-package pract1_6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-/**
- *
- * @author Ilia_Dukhov
- */
+
 public class Student {
     private String name;
     private List<Integer> marks;
