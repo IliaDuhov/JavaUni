@@ -1,10 +1,4 @@
 
-//package pract1_6;
-
-/**
- *
- * @author Ilia_Dukhov
- */
 public class House {
     private final int floor;
 
