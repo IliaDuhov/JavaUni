@@ -1,10 +1,4 @@
 
-package pract1_6;
-
-/**
- *
- * @author Ilia_Dukhov
- */
 public class Pistol {
     final int maxAmmo = 12;
     private int currentAmmo;
