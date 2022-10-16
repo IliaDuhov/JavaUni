@@ -1,4 +1,3 @@
-package pract1_6;
 
 final class Fraction {
     private final int numerator;
