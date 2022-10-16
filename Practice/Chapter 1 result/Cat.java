@@ -20,5 +20,17 @@ public class Cat {
         }
         System.out.printf("%s: %s!", name,String.join("-", meow));
     }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return String.format("Cat: %s", name);
+    }
+
 }
 
