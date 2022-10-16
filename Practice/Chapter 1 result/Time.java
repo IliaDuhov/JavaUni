@@ -1,7 +1,4 @@
 
-package pract1_6;
-
-
 public class Time {
     private int seconds;
 
