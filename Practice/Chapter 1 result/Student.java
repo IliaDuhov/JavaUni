@@ -27,7 +27,7 @@ public class Student {
 
     private List<Integer> correctMarks(List<Integer> marks){
         for (int mark : marks){
-            if (!(mark >= 2 && mark <= 5)){
+            if (mark < 2 || mark > 5){
                 throw new IllegalArgumentException(mark + " is impossible grade");
             }
         }
