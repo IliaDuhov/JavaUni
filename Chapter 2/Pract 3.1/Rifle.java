@@ -1,10 +1,4 @@
 
-package pract3_1;
-
-/**
- *
- * @author Ilia_Dukhov
- */
 public class Rifle extends Pistol {
     private final int shootPerSec;
     
