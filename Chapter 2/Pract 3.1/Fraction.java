@@ -1,5 +1,4 @@
 
-package pract3_1;
 
 
 final class Fraction {
