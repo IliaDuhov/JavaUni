@@ -1,7 +1,4 @@
 
-package pract3_1;
-
-
 public class Pistol {
     private final int maxAmmo;
     private int currentAmmo;
