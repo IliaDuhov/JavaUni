@@ -1,6 +1,5 @@
 
 public class Property {
-    public class Property {
     private String name;
     private Object obj;
     public Property(String name, Object obj){
@@ -8,4 +7,4 @@ public class Property {
         this.obj = obj;
     }
 }
-}
+
