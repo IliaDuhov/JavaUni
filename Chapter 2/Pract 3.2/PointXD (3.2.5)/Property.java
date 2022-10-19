@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package extention;
 
-/**
- *
- * @author Ilia_Dukhov
- */
 public class Property {
-    
+    public class Property {
+    private String name;
+    private Object obj;
+    public Property(String name, Object obj){
+        this.name = name;
+        this.obj = obj;
+    }
+}
 }
