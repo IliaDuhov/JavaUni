@@ -27,5 +27,20 @@ public class Tester {
             cat.doMeow();
         }
     }
+    public static int calculateLength(Lengthable ...lines){
+        int resLength = 0;
+        for (Lengthable line : lines){
+            resLength += line.length();
+        }
+        return resLength;
+    }
+
+    public static BrokenLine createBigBrokenLine(Brokenlineable ...figures){
+        BrokenLine brokenLine = new BrokenLine();
+        for (Brokenlineable figure : figures){
+            brokenLine.addPoint(figure.returnBrokenLine().getPoints().toArray(new Point[0]));
+        }
+        return brokenLine;
+    }
     
 }
