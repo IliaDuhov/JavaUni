@@ -1,7 +1,3 @@
-
-package repeaettest;
-
-
 abstract class Convertor{
     abstract void read();
     abstract void change();
