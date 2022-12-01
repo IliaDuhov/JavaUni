@@ -1,6 +1,6 @@
 public class Green implements Colourable{
     public String toString(){
-        return "Red";
+        return "Green";
     }
     @Override
     public Red nextColour(){
