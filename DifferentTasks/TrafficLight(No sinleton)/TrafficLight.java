@@ -1,7 +1,3 @@
-
-package Singleton;
-
-
 public class TrafficLight {
     Colourable curColor = new Black();
     public void on(){
