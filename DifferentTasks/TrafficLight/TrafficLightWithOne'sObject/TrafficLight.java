@@ -1,7 +1,3 @@
-
-package Singleton;
-
-
 public class TrafficLight {
     Colourable curColor = Black.getBlack();
     public void on(){
