@@ -3,7 +3,7 @@ import java.util.List;
 
 
 public class Block implements AvrgMarkable{
-    private List<Mark> marks = new ArrayList<>();
+    private List<AvrgMarkable> marks = new ArrayList<>();
 
     public Block(List<Mark> marks) {
         this.marks = new ArrayList<>(marks);
