@@ -1,7 +1,3 @@
-
-package Singleton;
-
-
 public class Black implements Colourable{
     public String toString(){
         return "Black";
