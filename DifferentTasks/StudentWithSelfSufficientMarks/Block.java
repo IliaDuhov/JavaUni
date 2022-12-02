@@ -5,7 +5,7 @@ import java.util.List;
 public class Block implements AvrgMarkable{
     private List<AvrgMarkable> marks = new ArrayList<>();
 
-    public Block(List<Mark> marks) {
+    public Block(List<AvrgMarkable> marks) {
         this.marks = new ArrayList<>(marks);
     }
 
@@ -15,7 +15,7 @@ public class Block implements AvrgMarkable{
             return 0;
         }
         double sum=0;
-        for(Mark mark: marks){
+        for(AvrgMarkable mark: marks){
             sum += mark.avarageMark();
         }
         return (double) sum/marks.size();
