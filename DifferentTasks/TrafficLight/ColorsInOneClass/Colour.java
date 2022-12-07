@@ -1,6 +1,3 @@
-
-package pract05december;
-
 public class Colour implements Colourable{
     private String color;
     private Colourable next;
