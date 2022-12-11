@@ -1,6 +1,3 @@
-package MissedTasks;
-
-
 public class Collar implements CanMeow{
     
     Cat cat;
