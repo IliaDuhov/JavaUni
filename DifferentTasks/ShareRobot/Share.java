@@ -1,7 +1,3 @@
-
-package Robot;
-
-
 public class Share implements Changeable{
     private String name;
     private int price;
