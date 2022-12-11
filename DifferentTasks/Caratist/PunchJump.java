@@ -1,7 +1,3 @@
-
-package MissedTasks;
-
-
 public class PunchJump implements Able{
 
     @Override
