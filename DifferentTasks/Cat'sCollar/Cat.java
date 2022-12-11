@@ -1,5 +1,3 @@
-package MissedTasks;
-
 public class Cat implements CanMeow{
     
     final String name;
