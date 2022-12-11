@@ -1,6 +1,3 @@
-package MissedTasks;
-
-
 public class PunchLeg implements Able{
 
     @Override
