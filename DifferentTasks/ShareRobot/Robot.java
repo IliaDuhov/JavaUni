@@ -1,9 +1,4 @@
-
-package Robot;
-
 import java.util.List;
-
-
 public class Robot implements Checkable{
     int count;
     int price;
