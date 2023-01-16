@@ -18,7 +18,7 @@ public class Rifle extends Pistol {
     }
     @Override
     public void shoot(){
-        for(int i = 0; i<rateOfFire; i++){
+        for(int i = 0; i<shootPerSec; i++){
             System.out.println("Bax");
         }
     }
