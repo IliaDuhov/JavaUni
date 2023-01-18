@@ -75,7 +75,7 @@ public class Student {
     public void setName(String name){
        String tmp = this.name;
        this.name = name;
-       actions.push(() -> this.name = name);
+       actions.push(() -> this.name = tmp);
     }
     public void removeMark(int index) {
         this.marks.remove(index);
