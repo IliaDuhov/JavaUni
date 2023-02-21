@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package codesjava;
 
 import java.lang.reflect.Field;
@@ -17,7 +20,7 @@ public class Entity {
 
     @Override
     public String toString() {
-        String resStr = "{";
+        StringBuilder sb = new StringBuilder();
         Class<?> obj = this.getClass();
         List<Field> fieldList = new ArrayList<>(Arrays.asList(obj.getDeclaredFields()));
         while(obj.getSuperclass() != Object.class){
@@ -29,20 +32,21 @@ public class Entity {
         }
         for(Field field: fieldList){
             field.setAccessible(true);
-            try {
-                resStr += field.getName().toString();//name of field
-                resStr += "=";
-                resStr += field.get(this).toString();//value of field
-                resStr += " ";
-                //READ ABOUT STRINGBUILDER AND RETURN LATER
-            } catch (IllegalArgumentException ex) {
-                Logger.getLogger(Entity.class.getName()).log(Level.SEVERE, null, ex);
+            String name = field.getName();
+            String value = "";
+            try{
+                value = field.get(this).toString();
+            }catch(IllegalArgumentException e){
+                throw new RuntimeException(e);
             } catch (IllegalAccessException ex) {
                 Logger.getLogger(Entity.class.getName()).log(Level.SEVERE, null, ex);
             }
+            sb.append(String.format("%s = %s", name, value));
         }
-        resStr += "}";
-        return resStr;
+        sb.insert(0, "{");
+        sb.replace(sb.length()-2, sb.length(), "}");
+        
+        return sb.toString();
     }
     
 }
