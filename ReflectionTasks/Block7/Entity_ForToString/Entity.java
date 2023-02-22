@@ -14,7 +14,7 @@ import jdk.jshell.spi.ExecutionControl;
 
 /**
  *
- * @author Ilia_Dukhov
+ * @author Melancholia312
  */
 public class Entity {
 
