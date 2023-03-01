@@ -19,11 +19,6 @@ import java.lang.reflect.Array;
  */
 public class CodesJava {
     public static void main(String[] args) throws Exception{
-        C c = new C();
-        System.out.println(fieldCollection(c));
-        System.out.println(c.toString());
-        Human h1 = new Human(150);
-        validate(h1, HumanTest.class);
         
     }
     public static List fieldCollection(Object object){
