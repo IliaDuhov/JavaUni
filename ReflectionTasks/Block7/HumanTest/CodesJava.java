@@ -30,11 +30,11 @@ public class CodesJava {
         }
         return lst;
     }
-    public static void validate(Object ob, Class test)throws Exception{
-        Class obj = ob.getClass();
-        for(Method method:test.getDeclaredMethods()){
-            method.invoke(null, obj);
-        }
+    public static void validate(Object object, Class<?> testClass) throws InvocationTargetException, IllegalAccessException, InstantiationException {
+            Method[] tests = testClass.getDeclaredMethods();
+            for (Method method : tests){
+                method.invoke(testClass.newInstance(), object);
+            }
     }
     
 }
