@@ -16,7 +16,7 @@ public class Human {
         this.parent = parent;
         checkParentSecondname();
     }
-    public void checkParentSecondname(){
+    private void checkParentSecondname(){
         if (this.name.surname == null && !(this.parent.name.surname == null)) {
             this.name.surname = parent.name.surname;
         }
