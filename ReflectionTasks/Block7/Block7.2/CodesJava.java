@@ -32,29 +32,19 @@ public class CodesJava {
         
     }
     
-    public static void validate(Object...object) throws Exception{
-        Class<?> clz = object.getClass();
-        if(!clz.isAnnotationPresent(Validate.class)){
-            return;
-        }
-        Method[] marr = clz.getDeclaredMethods();
-        if(clz.isAnnotationPresent(Validate.class)){
-            Validate val = clz.getDeclaredAnnotation(Validate.class);
-            Class[] testClass = val.value();
-            for(Method method:clz.getDeclaredMethods()){
-                method.invoke(clz.newInstance(), testClass[0].getDeclaredMethod("checkAge").invoke(null));
+    public static void validate(Object someObject) throws Exception {
+        Class<?> objClass = someObject.getClass();
+        Class<?>[] testClasses = objClass.getAnnotation(Validate.class).value();
+        List<Method> testMethods;
+        if(objClass.isAnnotationPresent(Validate.class)){
+            for (Class<?> testClass : testClasses){
+                testMethods = Arrays.asList(testClass.getDeclaredMethods());
+                for (Method method : testMethods){
+                    method.invoke(null, someObject);
+                }
             }
-            
         }
     }
-//    for(Method method: clz.getDeclaredMethods()){
-//                Validate val = clz.getDeclaredAnnotation(Validate.class);
-//                Class[] testClass = val.value();
-//                Method[] marr = testClass[0].getDeclaredMethods();
-//                for(Method meth: marr){
-//                    meth.invoke(clz.newInstance(),testClass[0].getMethod("checkHeight").invoke(null), testClass[0].getMethod("checkAge").invoke(null));
-//                }
-//            }
     
     
     public static Map<String, Object> collector(Class clz) throws Exception{
