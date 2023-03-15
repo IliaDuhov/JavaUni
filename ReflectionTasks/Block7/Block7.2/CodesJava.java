@@ -31,16 +31,6 @@ public class CodesJava {
         validate(h);
         
     }
-    public static List fieldCollection(Object object){
-        Class obj = object.getClass();
-        List<Field> lst = new ArrayList<>(Arrays.asList(obj.getDeclaredFields()));
-        while(obj.getSuperclass()!=Object.class){
-            obj = obj.getSuperclass();
-            lst.addAll(Arrays.asList(obj.getDeclaredFields())); 
-        }
-        return lst;
-    }
-    
     
     public static void validate(Object...object) throws Exception{
         Class<?> clz = object.getClass();
