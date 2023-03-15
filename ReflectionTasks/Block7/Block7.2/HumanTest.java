@@ -9,12 +9,12 @@ package codesjava;
  * @author Ilia_Dukhov
  */
 public class HumanTest {
-    public void checkAge(Human human)throws Exception{
+    public static void checkAge(Human human)throws Exception{
         if(human.getAge()>120){
             throw new IllegalArgumentException("TOO OLD");
         }
     }
-    public void checkHeight(Human human){
+    public static void checkHeight(Human human){
         if(human.getHeight()>270){
             throw new IllegalArgumentException("TOO HIGH");
         }
