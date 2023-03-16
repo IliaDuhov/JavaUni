@@ -60,42 +60,7 @@ public class CodesJava {
     }
     
     
-    public static void reset(Object someObject) throws Exception {
-        List<Field> fields = new ArrayList<>();
-        Class<?> defaultClass;
-        Class<?> objClass = someObject.getClass();
-
-        while (objClass.getSuperclass() != Object.class){
-            objClass = objClass.getSuperclass();
-            fields.addAll(Arrays.stream(objClass
-                    .getDeclaredFields())
-                    .filter(field -> field.isAnnotationPresent(Default.class))
-                    .toList());
-        }
-
-        if (someObject.getClass().isAnnotationPresent(Default.class)){
-            fields.addAll(Arrays.asList(someObject.getClass()
-                    .getDeclaredFields()));
-            defaultClass = someObject.getClass().getAnnotation(Default.class).value();
-        } else {
-            fields.addAll(Arrays.stream(someObject.getClass()
-                    .getDeclaredFields())
-                    .filter(field -> field.isAnnotationPresent(Default.class))
-                    .toList());
-            defaultClass = null;
-        }
-
-        for (Field field : fields) {
-            field.setAccessible(true);
-            if (defaultClass == null){
-                field.set(someObject, field.getAnnotation(Default.class).value()
-                     .getDeclaredField(field.getName()).get(null));
-            } else {
-                field.set(someObject, defaultClass.getDeclaredField(field.getName()).get(null));
-            }
-        }
-
-    }
+    
 }
     
     
