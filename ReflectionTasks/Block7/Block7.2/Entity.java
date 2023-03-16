@@ -23,7 +23,11 @@ public class Entity {
         Class<?> obj = this.getClass();
         List<Field> fieldList = new ArrayList<>(Arrays.asList());
         if(obj.isAnnotationPresent(ToString.class)){
-            fieldList.addAll(Arrays.asList(obj.getDeclaredFields()));
+                    ToString anno = obj.getDeclaredAnnotation(ToString.class);
+                    Enum testValue = anno.value();
+                    if(testValue != YesOrNo.No){
+                        fieldList.addAll(Arrays.asList(obj.getDeclaredFields()));
+                    }
         }else{
             for(Field field: obj.getDeclaredFields()){
                 if(field.isAnnotationPresent(ToString.class)){
