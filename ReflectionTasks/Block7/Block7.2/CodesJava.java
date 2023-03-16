@@ -59,6 +59,35 @@ public class CodesJava {
         return map;
     }
     
+    public static void reset(Object obj)throws Exception{
+        List<Field> fields = new ArrayList<>();
+        Class<?> defaultClass=null;
+        Class<?> objClass = obj.getClass();
+
+        while (objClass.getSuperclass() != Object.class){
+            objClass = objClass.getSuperclass();
+            for(Field field: Arrays.asList(objClass.getDeclaredFields())){
+                if(field.isAnnotationPresent(Default.class)){
+                    fields.add(field);
+                }
+            }
+        }
+
+        if (obj.getClass().isAnnotationPresent(Default.class)){
+            fields.addAll(Arrays.asList(obj.getClass().getDeclaredFields()));
+            defaultClass = obj.getClass().getAnnotation(Default.class).value();
+        }
+        for (Field field : fields) {
+            field.setAccessible(true);
+            if (defaultClass == null){
+                field.set(obj, field.getAnnotation(Default.class).value()
+                     .getDeclaredField(field.getName()).get(null));
+            } else {
+                field.set(obj, defaultClass.
+                        getDeclaredField(field.getName()).get(null));
+            }
+        }
+    }
     
     
 }
